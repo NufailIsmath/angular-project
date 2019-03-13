@@ -1,0 +1,30 @@
+<app-nav-bar></app-nav-bar>
+<form #removeItem="ngForm">
+  <div class="form-group-row">
+      <div layout="column" layout-align="center center">
+        <hr>
+          <div class="col-sm-offset-5">
+            
+            <h1 class="text-primary">Remove Item</h1>
+            <br>
+          </div>
+        </div>
+        <hr>
+        <div layout="column" layout-align="center center">
+          <div class="col-sm-offset-3">
+            <label class="col-sm-2 control-label" for="ISBN">ISBN</label>
+            <div class="col-sm-3">
+              <input type="number" class="form-control" [(ngModel)]="isbn"  id="isbn" placeholder="Enter ISBN"  name="isbn" required> 
+            </div>
+          </div>
+          <div>
+            <div class="col-sm-offset-3 col-sm-10">
+                <br>
+              <button type="submit" class="btn btn-danger" [disabled]="removeItem.form.invalid" (click)="deleteItem()">Remove Item</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+</form>        
+      
